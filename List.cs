@@ -188,22 +188,26 @@ namespace Method_lab2
 
         public void reverse()
         {
-            List newlist = new List();
-
             int L = this.lenght();
-            if (L == 0) return;
-            
-            ListNode current = head;
-            ListNode prev = null;
-            ListNode next = null;
-            for (int i = 0; i < L; i++)
+            if (L == 0&&L==1) return;
+
+            ListNode last = new ListNode();
+            last.data = head.data;
+            ListNode newhead = new ListNode();
+            ListNode current = head.next;
+            newhead.next = last;
+            newhead.data = current.data;
+
+            for(int i = 0; i < L-2; i++)
             {
-                next = current.next;
-                current.next = prev;
-                prev = current;
-                current = next;
+                current= current.next;
+                ListNode temp = new ListNode();
+                temp.next = newhead;
+                temp.data = current.data;
+                newhead= temp;
             }
-            head = prev;
+            last.next = newhead;
+            head = newhead;
         }
         public List clone()
         {
