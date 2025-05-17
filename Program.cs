@@ -14,12 +14,15 @@ namespace Method_lab2
             list.Append('a');
             list.Append('b');
             list.Append('c');
-            list.Append('e');
+            list.Append('c');
             list.Append('d');
-            
             list.display();
+
+            list.reverse();
+            list.display();
+            
+
             Console.WriteLine("List length: " + list.lenght());
-            Console.WriteLine("List elements:");
             Console.ReadKey();
         }
     }

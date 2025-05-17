@@ -141,14 +141,83 @@ namespace Method_lab2
         {
             int L= this.lenght();
             if (L == 0) return;
-               
+            
             ListNode current = head;
             ListNode temp;
+            head = null;
             for(int i = 0; i < L; i++)
             {
                 temp = current;
                 current = current.next;
                 temp = null;
+            }
+        }
+
+        public int findfirst(char a)
+        {
+            int L = this.lenght();
+            if (L == 0) return -1;
+            ListNode current = head;
+            for (int i = 0; i < L; i++)
+            {
+                if (current.data == a)
+                {
+                    return i;
+                }
+                current = current.next;
+            }
+            return -1;
+        }
+
+        public int findlast(char a)
+        {
+            int L = this.lenght();
+            if (L == 0) return -1;
+            ListNode current = head;
+            int index = -1;
+            for (int i = 0; i < L; i++)
+            {
+                if (current.data == a)
+                {
+                    index = i;
+                }
+                current = current.next;
+            }
+            return index;
+        }
+
+        public void reverse()
+        {
+            List newlist = new List();
+
+            int L = this.lenght();
+            if (L == 0) return;
+            
+            ListNode current = head;
+            ListNode prev = null;
+            ListNode next = null;
+            for (int i = 0; i < L; i++)
+            {
+                next = current.next;
+                current.next = prev;
+                prev = current;
+                current = next;
+            }
+            head = prev;
+        }
+        public List clone()
+        {
+            return this;
+        }
+        public void extend(List list)
+        {
+            int L2 = list.lenght();
+            if (list.head == null) return;
+            ListNode curent = list.head;
+            for(int i = 0; i < L2; i++)
+            {
+                Append(curent.data);
+                curent = curent.next;
             }
         }
     }
