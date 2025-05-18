@@ -10,7 +10,7 @@ namespace Method_lab2
     {
         static void Main(string[] args)
         {
-            List list = new List();
+            ListLab list = new ListLab();
             list.Append('a');
             list.Append('b');
             list.Append('c');
