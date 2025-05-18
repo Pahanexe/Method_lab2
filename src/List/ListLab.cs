@@ -38,7 +38,7 @@
                 current = current.next;
                 count++;
             }
-            return count;
+            return count+1;
         }
         //Adds a new element to the end of the list
         public void Append(char data)
