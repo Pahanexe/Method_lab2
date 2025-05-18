@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Method_lab2
 {
-    public class List
+    internal class List
     {
         private class ListNode
         {
