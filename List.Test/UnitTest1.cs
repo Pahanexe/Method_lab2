@@ -1,6 +1,4 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Method_lab2;
-namespace Method_lab2.Testing
+namespace List.Test
 {
     [TestClass]
     public class UnitTest1
