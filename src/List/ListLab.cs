@@ -8,20 +8,22 @@
             public ListNode next;
         }
         private ListNode head;
-        public void display()
+        public string display()
         {
+            string result = "";
             if (head == null)
             {
-                Console.WriteLine("List is empty");
+                result="List is empty";
             }
             int L = this.lenght();
             ListNode current = head;
             for (int i = 0; i < L; i++)
             {
-                Console.Write(current.data + ", ");
+                result += current.data + " ";
                 current = current.next;
             }
             Console.WriteLine();
+            return result;
         }
 
         //Counts number of elements in the list

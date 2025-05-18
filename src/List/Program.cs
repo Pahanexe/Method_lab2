@@ -13,8 +13,8 @@
             list.display();
 
             list.reverse();
-            list.display();
-
+            string dis= list.display();
+            Console.WriteLine(dis);
 
             Console.WriteLine("List length: " + list.lenght());
             Console.ReadKey();
